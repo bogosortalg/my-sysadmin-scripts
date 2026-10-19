@@ -1,18 +1,23 @@
-N=5
+N=30
+
+OUT_FILE="output.log"
 
 while true; do
 	CURRENT_TIME=$(date +"%Y-%m-%d %H:%M:%S")
 	{
 		echo "--- $CURRENT_TIME ---"
 		echo ""
-		free -h
+		echo "RAM usage:"
+	       	free -h
 		echo ""
-		df -h
+		echo "Filesystem:" 
+		df -h 
 		echo ""
-		uptime
+		echo "Working time and CPU payload: "
+	       	uptime
 		echo ""
 		echo ""
-	}	
+	} >> "$OUT_FILE"	
 	sleep "$N"
 	
 done
