@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 N=30
 
 OUT_FILE="output.log"
